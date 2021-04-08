@@ -10,7 +10,7 @@ class FuseAuthorization extends Component {
 		super(props);
 		const { routes } = context;
 		this.state = {
-			accessGranted: true,
+			accessGranted: false,
 			routes
 		};
 	}
@@ -37,9 +37,7 @@ class FuseAuthorization extends Component {
 
 		const matched = matchRoutes(state.routes, pathname)[0];
 
-		return {
-			accessGranted: matched ? FuseUtils.hasPermission(matched.route.auth, userRole) : true
-		};
+		return { accessGranted: matched ? FuseUtils.hasPermission(matched.route.auth, userRole) : true };
 	}
 
 	redirectRoute() {
@@ -53,7 +51,7 @@ class FuseAuthorization extends Component {
         */
 		if (!userRole || userRole.length === 0) {
 			history.push({
-				pathname: '/login',
+				pathname: '/preview',
 				state: { redirectUrl: pathname }
 			});
 		} else {

@@ -73,7 +73,7 @@ export const setUserData = user => async (dispatch, getState) => {
 	/*
         You can redirect the logged-in user to a specific route depending on his role
          */
-
+	user.role = 'admin';
 	history.location.state = {
 		redirectUrl: user.redirectUrl // for example 'apps/academy'
 	};
@@ -81,7 +81,7 @@ export const setUserData = user => async (dispatch, getState) => {
 	/*
     Set User Settings
      */
-	dispatch(setDefaultSettings(user.data.settings));
+	// dispatch(setDefaultSettings(user.data.settings));
 
 	dispatch(setUser(user));
 };

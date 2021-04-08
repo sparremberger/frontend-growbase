@@ -1,6 +1,6 @@
 {
-    "name": "fuse-react-app",
-    "version": "5.3.1",
+    "name": "growbase-admin",
+    "version": "0.0.1",
     "private": true,
     "dependencies": {
         "@date-io/core": "1.3.13",
@@ -114,7 +114,7 @@
         "tailwindcss-dir": "4.0.0"
     },
     "scripts": {
-        "start": "yarn run tailwind && react-scripts start",
+        "dev": "yarn run tailwind && react-scripts start",
         "build": "yarn run tailwind && yarn run purge-tailwind && cross-env GENERATE_SOURCEMAP=false react-scripts build",
         "tailwind": "tailwind build ./src/styles/tailwind-config.css -c ./tailwind.config.js -o ./src/styles/tailwind.css",
         "purge-tailwind": "node ./purge-tailwindcss.js",
