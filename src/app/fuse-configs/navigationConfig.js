@@ -24,12 +24,12 @@ const navigationConfig = [
 				url: '/example'
 			},
 			{
-				id: 'teste-component',
-				title: 'Teste',
-				translate: 'Teste',
+				id: 'products-component',
+				title: 'Products',
+				translate: 'Products',
 				type: 'item',
-				icon: 'whatshot',
-				url: '/teste'
+				icon: 'folder',
+				url: '/products'
 			}
 		]
 	}

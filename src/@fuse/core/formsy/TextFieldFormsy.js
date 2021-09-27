@@ -1,5 +1,6 @@
 import _ from '@lodash';
 import TextField from '@material-ui/core/TextField';
+import { mask as masker, unMask } from 'remask';
 import { withFormsy } from 'formsy-react';
 import React from 'react';
 
@@ -39,7 +40,16 @@ function TextFieldFormsy(props) {
 	const value = props.value || '';
 
 	function changeValue(event) {
-		props.setValue(event.currentTarget.value);
+		if (props?.mask) {
+			const originValue = unMask(event.currentTarget.value);
+			const maskedValue = masker(originValue, props.mask);
+			// props.onChange(maskedValue);
+
+			props.setValue(maskedValue);
+		} else {
+			props.setValue(event.currentTarget.value);
+		}
+
 		if (props.onChange) {
 			props.onChange(event);
 		}

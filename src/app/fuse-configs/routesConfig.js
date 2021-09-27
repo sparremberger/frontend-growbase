@@ -8,6 +8,7 @@ import MailConfirmConfig from 'app/main/mail-confirm/MailConfirmConfig';
 import PreviewConfig from 'app/main/preview/PreviewConfig';
 import HomeConfig from 'app/main/home/HomeConfig';
 import ForgotPasswordConfig from 'app/main/forgot-password/ForgotPasswordConfig';
+import ProductsConfig from 'app/main/products/ProductsConfig';
 
 const routeConfigs = [
 	ExampleConfig,
@@ -16,7 +17,8 @@ const routeConfigs = [
 	MailConfirmConfig,
 	PreviewConfig,
 	ForgotPasswordConfig,
-	HomeConfig
+	HomeConfig,
+	ProductsConfig
 ];
 
 const routes = [

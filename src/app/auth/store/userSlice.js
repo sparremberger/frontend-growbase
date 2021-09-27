@@ -162,7 +162,7 @@ export const updateUserData = user => async (dispatch, getState) => {
 			auth0Service
 				.updateUserData({
 					settings: user.data.settings,
-					shortcuts: user.data.shortcuts
+					shortcuts: user?.shortcuts
 				})
 				.then(() => {
 					dispatch(showMessage({ message: 'User data saved to auth0' }));

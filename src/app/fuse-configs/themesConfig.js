@@ -5,11 +5,11 @@ const themesConfig = {
 	default: {
 		palette: {
 			type: 'light',
-			primary: fuseDark,
+			primary: {
+				main: '#2b385b'
+			},
 			secondary: {
-				light: skyBlue[100],
-				main: skyBlue[500],
-				dark: skyBlue[900]
+				main: '#e16e0e'
 			},
 			background: {
 				paper: '#FFFFFF',
