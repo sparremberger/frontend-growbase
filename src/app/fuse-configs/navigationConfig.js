@@ -30,6 +30,22 @@ const navigationConfig = [
 				type: 'item',
 				icon: 'folder',
 				url: '/products'
+			},
+			{
+				id: 'category-component',
+				title: 'Category',
+				translate: 'Category',
+				type: 'item',
+				icon: 'add',
+				url: '/categories'
+			},
+			{
+				id: 'recados-component',
+				title: 'Recados',
+				translate: 'Recados',
+				type: 'item',
+				icon: 'add',
+				url: '/recados'
 			}
 		]
 	}

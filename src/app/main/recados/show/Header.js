@@ -12,16 +12,16 @@ import { Typography, Grid } from '@material-ui/core';
 import PageCardedHeader from 'app/fuse-layouts/shared-components/page-carded-header/PageCardedHeader';
 
 function Header() {
-	const productRedux = useSelector(({ product }) => product);
-	const [product, setProduct] = useState({});
+	const recadoRedux = useSelector(({ recado }) => recado);
+	const [recado, setRecado] = useState({});
 
 	useEffect(() => {
-		if (productRedux) {
-			setProduct(productRedux);
+		if (recadoRedux) {
+			setRecado(recadoRedux);
 		}
-	}, [productRedux]);
+	}, [recadoRedux]);
 
-	return <PageCardedHeader link="/products" title={product?.title || 'Novo produto'} textBack="Produtos" />;
+	return <PageCardedHeader link="/recados" title={recado?.recado || 'Novo recado'} textBack="Recados" />;
 }
 
 export default Header;
